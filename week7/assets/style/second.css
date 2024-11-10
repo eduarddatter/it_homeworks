@@ -1,0 +1,242 @@
+@font-face {
+  font-family: "Krub";
+  src: url(../fonts/krub-regular-webfont.woff2) format("woff2"),
+    url(../fonts/krub-regular-webfont.woff) format("woff");
+  font-size: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url(../fonts/rubik-italic-variablefont_wght-webfont.woff2)
+      format("woff2"),
+    url(../fonts/krub-regular-webfont.woff) format("woff");
+  font-size: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url(../fonts/rubik-italic-variablefont_wght-webfont.woff2)
+      format("woff2"),
+    url(../fonts/Rubik-Regular.woff) format("woff");
+  font-size: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+body {
+  min-width: 320px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  /* width: 100%; */
+  /* max-width: 1110px; */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  padding: 1em;
+  margin: 0 auto;
+  background-color: #e1ede6;
+}
+
+.header_wrapper {
+  display: inline-flex;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Krub", Arial, sans-serif;
+  font-size: 1rem;
+  color: #598d66;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.nav {
+  /* display: inline-flex; */
+  /* columns: 4; */
+  font-family: "Krub", Arial, sans-serif;
+  font-size: 1rem;
+  color: #2c2d35;
+}
+
+.nav_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav_item {
+  list-style-type: none;
+}
+
+a,
+a:hover {
+  color: #2c2d35;
+  text-decoration: none;
+}
+
+.main-container {
+  display: grid;
+  max-width: 100%;
+  /* max-width: 1110px; */
+  grid-template-areas:
+    "image title"
+    "image text"
+    "image button";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1/4;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.image {
+  grid-area: image;
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  grid-area: title;
+  font-family: "Krub", Arial, sans-serif;
+  font-size: 3rem;
+  color: #2c2d35;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #2c2d35;
+}
+
+span {
+  font-family: "Krub", Arial, sans-serif;
+  font-size: 60px;
+  color: #2c2d35;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  color: #598d66;
+}
+
+.text {
+  grid-area: text;
+  width: 540px;
+  font-family: "Krub", Arial, sans-serif;
+  font-size: 18px;
+  color: #2c2d35;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  color: #86928b;
+}
+
+.button {
+  grid-area: button;
+  width: 227px;
+  height: 65px;
+  padding: 20px 60px;
+  justify-content: center;
+  box-sizing: border-box;
+  color: rgba(89, 141, 102, 1);
+  border: 1px solid #598d66;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1/2;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  /* max-width: 1110px; */
+}
+
+.title-2 {
+  font-family: "Krub", Arial, sans-serif;
+  font-size: 2rem;
+  color: #2c2d35;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.country {
+  display: inline-flex;
+  flex-direction: row;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Rubik", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: normal;
+  color: #2c2d35;
+  border-radius: 20px;
+  background: #d4e8d9;
+}
+
+.country-1,
+.country-2,
+.country-3 {
+  display: inline-flex;
+  padding: 10px 20px;
+  gap: 32px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: #e1ede6;
+  /* align-items: flex-start;
+  gap: 30px; */
+  max-width: 1110px;
+}
+
+.gallery-container-img {
+  display: grid;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.space {
+  padding: 15px 0;
+  background-color: aliceblue;
+}
+
+/* .french_container {
+  opacity: 0.7;
+  background: url(/week7_k/assets/images/background.png),
+    lightgray 0% 0% / 100px 100px repeat;
+  mix-blend-mode: soft-light;
+} */
+
+.footer-container {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1/2;
+  background-color: #e1ede6;
+  padding: 10px 0;
+  justify-content: space-around;
+}
+
+#phone {
+  text-decoration: none;
+}
+
+.social-media {
+  width: 24px;
+  height: 24px;
+}

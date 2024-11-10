@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+html,
+body {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  grid-template-rows: 8% 1fr 12%;
+  /* font-size: clamp(14px, 16px, 18px); */
+}
+
+.grid-header {
+  display: grid;
+  grid-column: 1/3;
+  grid-row: 1/2;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(225, 220, 220, 0.944);
+  /* grid-area: header; */
+}
+
+.grid-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 12% 12%;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: rgb(252, 232, 208);
+}
+
+.grid-block {
+  grid-column: span 2;
+  text-align: center;
+  /* grid-area: block; */
+}
+
+.grid-block1,
+.grid-block2 {
+  display: grid;
+  /* padding: 2rem 1rem; */
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(241, 207, 166);
+}
+
+/* .grid-block1 {
+  grid-area: block1;
+}
+
+.grid-block2 {
+  grid-area: block2;
+} */
+
+.grid-block3 {
+  display: grid;
+  grid-column: span 2;
+  /* padding: 2rem 1rem; */
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(241, 207, 166);
+  /* grid-area: block3; */
+}
+
+.grid-aside {
+  padding: 1rem;
+  text-align: center;
+  background-color: rgb(191, 213, 191);
+}
+
+.grid-footer {
+  display: grid;
+  grid-column: 1/3;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(225, 220, 220, 0.944);
+  /* grid-area: footer; */
+}
+
+.grid-footer > div {
+  display: grid;
+  /* padding: 2rem 1rem; */
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background-color: rgb(252, 250, 250);
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .grid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-bottom: 15%;
+    background-color: rgba(225, 220, 220, 0.944);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid-main {
+    background-color: rgb(155, 187, 155);
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .grid-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "header"
+      "block"
+      "block1"
+      "block2"
+      "block3"
+      "footer"; */
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-container {
+    max-width: 1140px;
+  }
+}
