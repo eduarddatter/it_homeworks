@@ -1,0 +1,48 @@
+body {
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.container {
+  width: 400px;
+  padding: 0 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 30px;
+}
+
+#input {
+  width: 70%;
+  height: 25px;
+}
+
+#add {
+  width: 27%;
+  height: 31px;
+  background-color: rgb(54, 62, 60);
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: rgb(245, 236, 236);
+}
+
+#result {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.result-item {
+  display: flex;
+  padding: 4px 8px;
+  margin: 10px 0;
+  background: beige;
+  border: 1px solid rgba(16, 12, 12, 0.505);
+}
+
+.result-item-active {
+  color: #555;
+  text-decoration: line-through;
+}
