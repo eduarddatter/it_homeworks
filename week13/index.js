@@ -1,29 +1,41 @@
-const messageDate = document.querySelector("#birthdayDate");
-const resultInput = document.querySelector("#result");
+const birthdayDate = document.getElementById("birthdayDate");
+const resultInput = document.getElementById("result");
+const button = document.getElementById("button");
 
 function calculateDayPassed() {
-  const messageDateStr = messageDate.value;
-  const messageTimestamp = Date.parse(messageDateStr);
-  const currentTimeStamp = Date.now();
-  const timeDifference = messageTimestamp - currentTimeStamp;
-  const daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-  console.log(`До дня рождения осталось ${daysPassed} дней`);
-
+  const messageDate = birthdayDate.value;
+  const currentDate = new Date();
+  const birthday = new Date(messageDate);
+  const timeDifference = birthday - currentDate;
+  const daysPassed = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
   resultInput.textContent = `До дня рождения осталось ${daysPassed} дней`;
-
-  document.querySelector(".errorMessage").innerHTML = "";
-  if (messageDate.value === "") {
-    document.querySelector(".errorMessage").innerHTML +=
-      "Пожалуйста, введите дату рождения";
-  }
 
   if (daysPassed % 100 >= 5 && daysPassed % 100 <= 20) {
     resultInput.textContent = `До дня рождения осталось ${daysPassed} дней`;
-  } else if (daysPassed >= 2 && daysPassed <= 4) {
+  } else if (daysPassed % 100 >= 2 && daysPassed % 100 <= 4) {
     resultInput.textContent = `До дня рождения осталось ${daysPassed} дня`;
-  } else if (daysPassed === 1) {
+  } else if (daysPassed % 100 >= 1) {
     resultInput.textContent = `До дня рождения осталось ${daysPassed} день`;
+  } else if (daysPassed === 0) {
+    resultInput.textContent = `Ваш день рождения сегодня. С днем рождения!`;
+  } else if (daysPassed === 1) {
+    resultInput.textContent = `Ваш день рождения уже завтра`;
   } else {
-    resultInput.textContent = `что-то не так...`;
+    resultInput.textContent = `Ваш день рождения уже прошел...`;
   }
 }
+
+button.addEventListener("click", () => {
+  const messageDate = birthdayDate.value;
+  if (!messageDate) {
+    document.querySelector(".errorMessage").innerHTML =
+      "Пожалуйста, введите дату рождения";
+    //errorMessage.style.display = "block";
+    resultInput.textContent = "";
+  } else {
+    document.querySelector(".errorMessage").innerHTML = "";
+    //errorMessage.innerHTML = "";
+    //errorMessage.innerHTML.style.display = "none";
+    //errorMessage.style.display = "none";
+  }
+});
