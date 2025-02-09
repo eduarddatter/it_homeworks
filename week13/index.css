@@ -1,0 +1,28 @@
+body {
+  margin: 0 auto;
+  padding: 15px 15px;
+  text-align: center;
+}
+
+.title {
+  font-size: 33px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#button {
+  padding: 5px 5px;
+  color: white;
+  background-color: rgb(16, 176, 16);
+  border-radius: 10px;
+}
+
+.errorMessage {
+  font-size: 24px;
+  font-family: "Courier New", Courier, monospace;
+  color: red;
+}
+
+#result {
+  font-size: 24px;
+  font-family: "Courier New", Courier, monospace;
+}

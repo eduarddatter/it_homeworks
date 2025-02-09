@@ -1,4 +1,4 @@
-const messageDate = document.querySelector("#birthdayDate");
+const messageDate = document.querySelector("#messageDate");
 const resultInput = document.querySelector("#result");
 
 function calculateDayPassed() {
